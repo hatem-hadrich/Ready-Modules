@@ -11,6 +11,8 @@ global._projectdir = path.join(__dirname, '..', '..');
 global.product_id = new Date().getTime();
 global.new_customer_email = 'pub' + date_time + '@prestashop.com';
 
+global.module_tech_name_mailchimp = 'mailchimpintegration';
+global.listNameInput = 'Test_list_MailChimp' + date_time;
 module.exports = {
     selector: {
 
@@ -45,8 +47,8 @@ module.exports = {
                 customer_address_email_input: '//*[@id="form-customer"]/div/div[2]/table/thead/tr[2]/th[7]/input',
                 customer_search_button: '#submitFilterButtoncustomer'
             },
-            ModulePageSocialConnect:{
-                Common:{
+            ModulePageSocialConnect: {
+                Common: {
                     menu_tabs: '//*[@id="navtabs16"]/li[%ID]/a',
                     title_page_name: '//*[@id="%NAME"]/form/div/div[1]',
                     developers_link: '//*[@id="%NAME"]/div/div/fieldset/div[3]/a',
@@ -67,8 +69,7 @@ module.exports = {
                     save_button: '//*[@id="module_form_submit_btn_19"]'
                 },
                 //@TODO
-                Amazon: {
-                },
+                Amazon: {},
                 Google: {
                     authorized_javaScript_origins_input: '//*[@id="google"]/div/div/fieldset/div[21]/input',
                     authorized_redirect_uri_input: '//*[@id="google"]/div/div/fieldset/div[22]/input',
@@ -83,8 +84,7 @@ module.exports = {
                     customer_secret_input: '//*[@id="pics"]',
                     save_button: '//*[@id="module_form_submit_btn_32"]'
                 },
-                Yahoo: {
-                },
+                Yahoo: {},
                 Paypal: {
                     return_url_input: '//*[@id="paypal"]/div/div/fieldset/div[8]/input',
                     privacy_policy_url_input: '//*[@id="paypal"]/div/div/fieldset/div[11]/input',
@@ -158,11 +158,36 @@ module.exports = {
                     customer_secret_input: '//*[@id="vcs"]',
                     save_button: '//*[@id="module_form_submit_btn_33"]'
                 }
+            },
+            SettingPage: {
+                setting_subtab: '#subtab-ShopParameters',
+            },
+            MailChimpModulePage: {
+                login_input: '//*[@id="username"]',
+                password_input: '//*[@id="password"]',
+                login_button: '//*[@id="login-form"]/fieldset/div[3]/input',
+                access_button: '//*[@id="content"]/div[5]/div/div/div/a',
+                connection_list: '//*[@id="content"]/div[5]/div/div/div/span',
+                list_select: '//*[@id="current_list_id"]',
+                save_button: '//*[@id="configuration_form_submit_btn"]',
+                config_module_button: '//*[@id="modules-list-container-all"]/div/div/div/div[5]/div[2]/form/button',
+                option_select: '//*[@id="current_list_id"]/option[3]',
+                list_input: '//*[@id="new_list_name"]'
+            },
+            ContactPage: {
+                contact_subtab: '//*[@id="subtab-AdminParentStores"]/a',
+                shop_link: '//*[@id="content"]/div[1]/div/div[2]/a[2]',
+                adress_shop_input: '//*[@id="conf_id_PS_SHOP_ADDR1"]/div/input',
+                postal_code_input: '//*[@id="conf_id_PS_SHOP_CODE"]/div/input',
+                city_shop_input: '//*[@id="conf_id_PS_SHOP_CITY"]/div/input',
+                phone_input: '//*[@id="conf_id_PS_SHOP_PHONE"]/div/input',
+                fax_input: '//*[@id="conf_id_PS_SHOP_FAX"]/div/input',
+                save_button: '//*[@id="store_fieldset_contact"]/div[3]/button',
             }
         },
         //FO
         FO: {
-            SocialConnect:{
+            SocialConnect: {
                 Common: {
                     first_logos: '#follow-teaser > div > a.%SOCIAL.custom-social-button-all.custom-social-button-1 > i',
                     second_logos: '#_desktop_user_info > div > span > a.%SOCIAL.custom-social-button-all.custom-social-button-4 > i',
@@ -275,8 +300,8 @@ module.exports = {
             Common: {
                 favicon: '/html/head/link[2]',
 
-                desktop_login:'//*[@id="_desktop_logo"]/a',
-                cookie_banner_close_button:'//*[@id="checkout"]/div/a',
+                desktop_login: '//*[@id="_desktop_logo"]/a',
+                cookie_banner_close_button: '//*[@id="checkout"]/div/a',
                 clickOutSide: '//*[@id="index"]'
             },
 
@@ -286,7 +311,7 @@ module.exports = {
                 first_product_home_page: '.thumbnail.product-thumbnail',
                 first_product_home_page_name: '[itemprop="name"]',
 
-                access_loginFO:'div.user-info > a',
+                access_loginFO: 'div.user-info > a',
                 loginFO_input: '//*[@id="login-form"]/section/div[1]/div[1]/input',
                 passwordFO_input: '//*[@id="login-form"]/section/div[2]/div[1]/div/input',
                 loginFO_button: '//*[@id="login-form"]/footer/button',
@@ -318,14 +343,14 @@ module.exports = {
             },
 
             //Cart summary selectors
-            CartSummary:{
+            CartSummary: {
                 command_button_checkout: '//*[@id="main"]/div/div[2]/div[1]/div[3]/div/a',
-                checkout_step2_continue_button:'//*[@id="checkout-addresses-step"]/div/div/form/div[2]/button',
+                checkout_step2_continue_button: '//*[@id="checkout-addresses-step"]/div/div/form/div[2]/button',
                 step3_section: '//*[@id="checkout-delivery-step"]',
                 checkout_step4_payment: '//*[@id="payment-option-2"]',
                 checkout_step4_cgv: '//input[@id="conditions_to_approve[terms-and-conditions]"]',
                 checkout_step4_order_button: '#payment-confirmation >div > button',
-                order_confirmation_text:'#content-hook_order_confirmation > div > div > div > h3 > i'
+                order_confirmation_text: '#content-hook_order_confirmation > div > div > div > h3 > i'
             },
 
             //Commande selector

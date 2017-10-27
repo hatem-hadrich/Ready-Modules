@@ -159,6 +159,11 @@ module.exports = {
                     save_button: '//*[@id="module_form_submit_btn_33"]'
                 }
             },
+            ModuleGoogleAdwords: {
+                voucher_input: '//pre[@id="adwords_voucher"]',
+                gadwords_start_button: '//*[@id="create-account-btn"]',
+                google_adwords_voucher: '//*[@id="right-content"]/div[1]/a'
+            },
             SettingPage: {
                 setting_subtab: '#subtab-ShopParameters',
             },

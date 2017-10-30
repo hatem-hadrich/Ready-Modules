@@ -162,6 +162,13 @@ module.exports = {
             SettingPage: {
                 setting_subtab: '#subtab-ShopParameters',
             },
+            ModulePagePixel: {
+                configuration_subtub: '//*[@id="modulecontent"]/div[1]/div[1]/a[2]',
+                pixel_id_input: '//*[@id="PS_PIXEL_ID"]',
+                save_button: '//*[@id="wizard"]/div[3]/div/button',
+                close_green_notification_button: '//*[@id="content"]/div[5]/div/button',
+                green_notification: '//*[@id="content"]/div[5]/div[@class="module_confirmation conf confirm alert alert-success"]'
+            },
             MailChimpModulePage: {
                 login_input: '//*[@id="username"]',
                 password_input: '//*[@id="password"]',

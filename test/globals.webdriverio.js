@@ -38,7 +38,9 @@ module.exports = {
                 number_of_module_found:'//*[@id="main-div"]/div[3]/div/div/div[2]/div/div[7]/span[1]',
                 configuration_button:'//*[@id="modules-list-container-all"]/div/div/div/div[5]/div[2]/form/button',
                 module_menu_button: '[class="btn btn-primary-outline  dropdown-toggle"]',
-                enable_module_button: '[class="dropdown-item module_action_menu_enable"]'
+                enable_module_button: '[class="dropdown-item module_action_menu_enable"]',
+                configure_module_button: '[class="dropdown-item module_action_menu_configure"]',
+                actions_module_dropdown:'//*[@id="modules-list-container-all"]/div/div/div/div[5]/div[2]/button'
             },
             //Customer page selectors
             CustomersPage: {
@@ -183,6 +185,22 @@ module.exports = {
                 phone_input: '//*[@id="conf_id_PS_SHOP_PHONE"]/div/input',
                 fax_input: '//*[@id="conf_id_PS_SHOP_FAX"]/div/input',
                 save_button: '//*[@id="store_fieldset_contact"]/div[3]/button',
+            },
+            ModulePageCookieBanner: {
+                banner_position_top: '//*[@class="radio-banner-position"]/ul/li[1]',
+                banner_position_bottom: '//*[@class="radio-banner-position"]/ul/li[2]',
+                banner_position_bottomright: '//*[@class="radio-banner-position"]/ul/li[3]',
+                banner_position_bottomleft: '//*[@class="radio-banner-position"]/ul/li[4]',
+                save_button: '//*[@id="submitCookieBannerModule"]',
+                background_color_input: '//*[@id="color_0"]',
+                color_text_input: '//*[@id="color_3"]',
+                text_textarea: 'textarea.CB-TEXT',
+                text_learn_more_input: 'input.CB-LINK-TEXT',
+                cms_page_select: '//*[@id="CB-CMS"]',
+                accept_button_text_input: 'input.CB-BUTTON-TEXT',
+                background_button_color_input: '//*[@id="color_2"]',
+                on_mouse_over_input: '//*[@id="color_4"]',
+                button_text_color_input: '//*[@id="color_5"]'
             }
         },
         //FO
@@ -364,8 +382,16 @@ module.exports = {
                 footer: '//*[@id="footer"]',
                 payment_option_radio: '//*[@id="payment-option-1"]',
                 first_logo: '//a[@class="%SOCIAL custom-social-button-all custom-social-button-2"]'
-            }
+            },
 
+            //cookie banner selectors
+            CookieBanner: {
+                configuration_banner:'//body/div[1]',
+                configuration_banner_body:'//body/div[1]/div[2]',
+                configuration_banner_body_link:'//body/div[1]/div[2]/a',
+                configuration_banner_body_button:'//body/div[1]/div[2]/div/button',
+                page_title: '//*[@id="main"]/header/h1'
+            }
         }
     },
     shouldExist: function(err, existing) {

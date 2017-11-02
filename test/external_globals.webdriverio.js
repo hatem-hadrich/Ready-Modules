@@ -12,7 +12,7 @@ module.exports = {
                 username_input: '//*[@id="email"]',
                 password_input: '//*[@id="pass"]',
                 signin_button: '//*[@id="loginbutton"]',
-                app_link : '//*[@id="js_en"]/span',
+                app_link: '//*[@id="js_en"]/span',
                 customer_api_key: '//*[@id="u_0_5t"]/div[1]/div/table/tbody/tr[1]/td[1]/div/div',
                 show_secret_button: '//*[@id="u_0_5u"]/div/button',
                 customer_api_secret: '//*[@id="u_0_5u"]/div/span',
@@ -22,23 +22,21 @@ module.exports = {
             },
             Twitter: {
                 signein_button: '//*[@id="gaz-content-body"]/div[2]/div/a',
-                signein_login_input : '//*[@id="page-container"]/div/div[1]/form/fieldset/div[1]/input',
-                signein_password_input : '//*[@id="page-container"]/div/div[1]/form/fieldset/div[2]/input',
-                signein_connect_input : '//*[@id="page-container"]/div/div[1]/form/div[2]/button',
+                signein_login_input: '//*[@id="page-container"]/div/div[1]/form/fieldset/div[1]/input',
+                signein_password_input: '//*[@id="page-container"]/div/div[1]/form/fieldset/div[2]/input',
+                signein_connect_input: '//*[@id="page-container"]/div/div[1]/form/div[2]/button',
 
-                app_link : '//*[@id="gaz-content-body"]/div[3]/div/ul/li[1]/div/div[2]/h2/a',
-                settings_tab : '//*[@id="gaz-content-body"]/div[2]/ul/li[2]/a',
-                key_and_access_tokens_tab : '//*[@id="gaz-content-body"]/div[2]/ul/li[3]/a',
-                website_url_input : '//*[@id="edit-url"]',
-                callback_url_input : '//*[@id="edit-callback-url"]',
-                update_settings_button : '//*[@id="edit-submit"]',
+                app_link: '//*[@id="gaz-content-body"]/div[3]/div/ul/li[1]/div/div[2]/h2/a',
+                settings_tab: '//*[@id="gaz-content-body"]/div[2]/ul/li[2]/a',
+                key_and_access_tokens_tab: '//*[@id="gaz-content-body"]/div[2]/ul/li[3]/a',
+                website_url_input: '//*[@id="edit-url"]',
+                callback_url_input: '//*[@id="edit-callback-url"]',
+                update_settings_button: '//*[@id="edit-submit"]',
                 customer_api_key: '//*[@id="gaz-content-body"]/div[3]/div/div[2]/div[1]/span[2]',
                 customer_api_secret: '//*[@id="gaz-content-body"]/div[3]/div/div[2]/div[2]/span[2]'
             },
             //@TODO
-            Amazon: {
-
-            },
+            Amazon: {},
             Google: {
                 username_input: '//*[@id="identifierId"]',
                 identifier_next_button: '//*[@id="identifierNext"]',
@@ -75,9 +73,7 @@ module.exports = {
                 save_button: '.small.primary.two.columns'
             },
             //@TODO
-            Yahoo: {
-
-            },
+            Yahoo: {},
             Paypal: {
                 username_input: '//*[@id="email"]',
                 password_input: '//*[@id="password"]',
@@ -198,12 +194,12 @@ module.exports = {
 
                 signin_button: '//*[@id="signup_forms_submit"]/span[6]',
                 app_link: '//*[@id="dashboard_account_oauth_apps"]/div[4]/div/div/div[2]/a[2]',
-                website_url_input:'//*[@id="oac_url"]',
-                callback_url_input:'//*[@id="oac_default_callback_url"]',
-                save_button:'//*[@id="save_button"]',
-                customer_key:'//*[@id="dashboard_account_register_oauth_app"]/div[4]/div/div/span[1]',
-                customer_secret:'//*[@id="secret"]',
-                show_secret_button:'//*[@id="secret_toggle"]'
+                website_url_input: '//*[@id="oac_url"]',
+                callback_url_input: '//*[@id="oac_default_callback_url"]',
+                save_button: '//*[@id="save_button"]',
+                customer_key: '//*[@id="dashboard_account_register_oauth_app"]/div[4]/div/div/span[1]',
+                customer_secret: '//*[@id="secret"]',
+                show_secret_button: '//*[@id="secret_toggle"]'
             },
             Vkontakte: {
                 username_input: '//*[@id="email"]',
@@ -219,6 +215,17 @@ module.exports = {
                 delete_base_domain_icon: '//*[@id="apps_edit_domain_cont"]/div/div[1]/div[1]/div/a/div',
                 domain_input: '//*[@id="apps_edit_domain_cont"]/div/div[1]/div[2]/input',
                 save_button: '//*[@id="app_save_btn"]'
+            },
+            GoogleAnalytics: {
+                connect_button: '/html/body/header/nav/div/a',
+                google_analytics_choice: '/html/body/header/nav/div/div/ul/li[1]/a',
+                property_settings_button: '//*[@id="ID-m-propertyColumn"]/div[2]/div[3]/div[1]/a[1]/div',
+                administration_button: '//*[@id="bottomSectionAdmin"]/nav/div/div/ga-nav-link/div/a/ng-include/span',
+                google_analytics_id: '//*[@id="ID-m-content"]/div/div/div/div/div/div[2]/div/ui-view/form/section[1]/div[1]/div[2]',
+                google_analytics_url_input: '//*[@id="ID-m-content"]/div/div/div/div/div/div[2]/div/ui-view/form/section[1]/div[3]/div[2]/ga-url-selector/input',
+                save_button: '//*[@id="ID-m-content"]/div/div/div/div/div/div[2]/div/ui-view/form/ga-submit-buttons/div/button[1]',
+                google_analytics_link: '/html/body/div[2]/div[2]/section/div/article/section/div/ol/li[1]/ul/li[1]/a',
+                reset_button: '//*[@id="ID-m-content"]/div/div/div/div/div/div[2]/div/ui-view/form/ga-submit-buttons/div/button[2]'
             }
         }
 

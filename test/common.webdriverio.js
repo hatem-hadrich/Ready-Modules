@@ -40,7 +40,7 @@ function initCommands(client) {
         return client
             .url('https://' + URL + '/backoffice/')
             .waitForExist(this.selector.BO.LoginPage.login_input, 90000)
-            .setValue(this.selector.BO.LoginPage.login_input, 'remi.gaillard@prestashop.com')
+            .setValue(this.selector.BO.LoginPage.login_input,'remi.gaillard@prestashop.com')
             .setValue(this.selector.BO.LoginPage.password_input, 'abcd1234')
             .click(this.selector.BO.LoginPage.login_button)
             .waitForExist(this.selector.BO.Common.menu, 90000)

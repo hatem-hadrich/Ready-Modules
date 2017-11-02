@@ -10,13 +10,12 @@ global.selenium_url = argv.SELENIUM;
 global._projectdir = path.join(__dirname, '..', '..');
 global.product_id = new Date().getTime();
 global.new_customer_email = 'pub' + date_time + '@prestashop.com';
-
 global.module_tech_name_mailchimp = 'mailchimpintegration';
 global.listNameInput = 'Test_list_MailChimp' + date_time;
 module.exports = {
     selector: {
 
-        BO:{
+        BO: {
             Common: {
                 menu: '#nav-sidebar',
                 close_validation_button: '.growl-close',
@@ -35,8 +34,8 @@ module.exports = {
                 page_loaded: '.module-search-result-wording',
                 installed_modules_tabs: '(//div[@class="page-head-tabs"]/a)[2]',
                 module_number_span: '[class="module-sorting-search-wording"]',
-                number_of_module_found:'//*[@id="main-div"]/div[3]/div/div/div[2]/div/div[7]/span[1]',
-                configuration_button:'//*[@id="modules-list-container-all"]/div/div/div/div[5]/div[2]/form/button',
+                number_of_module_found: '//*[@id="main-div"]/div[3]/div/div/div[2]/div/div[7]/span[1]',
+                configuration_button: '//*[@id="modules-list-container-all"]/div/div/div/div[5]/div[2]/form/button',
                 module_menu_button: '[class="btn btn-primary-outline  dropdown-toggle"]',
                 enable_module_button: '[class="dropdown-item module_action_menu_enable"]'
             },
@@ -183,6 +182,16 @@ module.exports = {
                 phone_input: '//*[@id="conf_id_PS_SHOP_PHONE"]/div/input',
                 fax_input: '//*[@id="conf_id_PS_SHOP_FAX"]/div/input',
                 save_button: '//*[@id="store_fieldset_contact"]/div[3]/button',
+            },
+
+            GoogleAnalyticsPage: {
+                config_module_button: '//*[@id="modules-list-container-native"]/div/div/div/div[5]/div[2]/form/button',
+                googleanalytics_tracking_id: '//*[@id="GA_ACCOUNT_ID"]',
+                enable_user_id_tracking: '//*[@id="ga_userid_enabled"]',
+                googleanalytics_submit_btn: '//*[@id="configuration_form_submit_btn"]',
+                account_id_green_block: '//*[@id="content"]/div[6]/div[@class="module_confirmation conf confirm alert alert-success"]',
+                user_id_green_block: '//*[@id="content"]/div[7]/div[@class="module_confirmation conf confirm alert alert-success"]',
+                create_account_link: '//*[@id="google_analytics_content"]/div/div[2]/p[2]/b/a'
             }
         },
         //FO
@@ -368,7 +377,7 @@ module.exports = {
 
         }
     },
-    shouldExist: function(err, existing) {
+    shouldExist: function (err, existing) {
         should(err).be.not.defined;
         should(existing).be.true;
     }

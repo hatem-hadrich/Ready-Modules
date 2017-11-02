@@ -20,7 +20,7 @@ scenario('Test mailChimp-integration', client => {
             test('should disconnect from list', () => client.disconnectFromList());
             test('should select list', () => client.selectList());
     }, "mailchimp-integration/mailChimpintegration-client");
-        scenario('Logout from Back Office', client => {
+    scenario('Logout from Back Office', client => {
             test('should logout', () => client.signOutBO());
     }, "mailchimp-integration/mailChimpintegration-client");
 }, "mailchimp-integration/mailChimpintegration-client", true);

@@ -174,6 +174,35 @@ module.exports = {
                 option_select: '//*[@id="current_list_id"]/option[3]',
                 list_input: '//*[@id="new_list_name"]'
             },
+            BlockProModule: {
+                block_menu: '//*[@id="subtab-AdminBlockblogtest"]/a',
+                category_subtab: '//*[@id="subtab-AdminBlockblogcategories"]/a',
+                add_new_category_button: '//*[@id="page-header-desc-blog_category-add_item"]',
+                title_input: '//*[@id="category_title_1"]',
+                seo_keywords_input: '//*[@id="category_seokeywords_1"]',
+                seo_description_input: '//*[@id="category_seodescription_1"]',
+                shop_association_checkbox: '//*[@id="fieldset_0"]/div[2]/div[7]/div/div/table/tbody/tr[2]/td/label/input',
+                group_permissions_checkbox: '//*[@id="fieldset_0"]/div[2]/div[8]/div/div/table/thead/tr/th[1]/input',
+                status_toggle: '//*[@id="fieldset_0"]/div[2]/div[10]/div/span/label[1]',
+                category_save_button: '//*[@id="blog_category_form_submit_btn"]',
+
+                Post: {
+                    post_subtab: '//*[@id="subtab-AdminBlockblogposts"]/a',
+                    add_new_post_button: '//*[@id="page-header-desc-blog_post-add_item"]',
+                    title_input: '//*[@id="post_title_1"]',
+                    seo_keywords_input: '//*[@id="post_seokeywords_1"]',
+                    seo_description_input: '//*[@id="post_seodescription_1"]',
+                    source_code_button: '//*[@id="mce_13"]/button',
+                    content_textarea: '//textarea[@class="mce-textbox mce-multiline mce-first mce-last mce-abs-layout-item"]',
+                    content_button:'//div[@class="mce-widget mce-btn mce-primary mce-first mce-abs-layout-item"]/button',
+                    post_image_file: '//*[@id="post_image"]',
+                    shop_association_checkbox:'//*[@id="fieldset_0"]/div[2]/div[10]/div/div/table/tbody/tr/td/label/input',
+                    group_permissions_checkbox: '//*[@id="fieldset_0"]/div[2]/div[11]/div/div/table/thead/tr/th[1]/input',
+                    comment_toggle: '//*[@id="fieldset_0"]/div[2]/div[12]/div/span/label[1]',
+                    status_toggle: '//*[@id="fieldset_0"]/div[2]/div[18]/div/span/label[1]',
+                    save_button: '//*[@id="blog_post_form_submit_btn"]'
+                }
+            },
             ContactPage: {
                 contact_subtab: '//*[@id="subtab-AdminParentStores"]/a',
                 shop_link: '//*[@id="content"]/div[1]/div/div[2]/a[2]',
@@ -187,6 +216,25 @@ module.exports = {
         },
         //FO
         FO: {
+            BlockPro: {
+                Category: {
+                    category_link: '//*[@id="blockblogcat_block_footer"]/div/div/div/a',
+                    page_title: '//*[@id="content"]/h1',
+                },
+                Post: {
+                    post_link: '//*[@id="blockblogposts_block_footer"]/div/div/div/div[2]/a',
+                    page_title: '//*[@id="content"]/div/div[1]/div[3]/h1',
+                },
+                Comment: {
+                    name_input: '//*[@id="name-blockblog"]',
+                    email_input: '//*[@id="email-blockblog"]',
+                    comment_textarea: '//*[@id="comment-blockblog"]',
+                    rating_icon: '//*[@id="commentform"]/div[4]/div[1]/div[1]/i[4]',
+                    captcha_input: '//*[@id="captcha-blockblog"]',
+                    comment_button: '//*[@id="commentform"]/div[6]/div[1]/input',
+                    succes_comment: '//*[@id="succes-comment"]'
+                }
+            },
             SocialConnect: {
                 Common: {
                     first_logos: '#follow-teaser > div > a.%SOCIAL.custom-social-button-all.custom-social-button-1 > i',

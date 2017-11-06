@@ -12,6 +12,9 @@ scenario('Check the voucher code of "Google adwords" module', client => {
         test('should check "Google AdWords" promotional code', () => client.checkGoogleAdwordsPromotionalCode());
         test('should click on "Start your campaign now with your promotional code" button', () => client.clickOnStartButton());
         test('should check "Google Adwords" voucher', () => client.checkGoogleAdwordsVoucher());
+        test('should click on "Get Started" button', () => client.clickOnGetStartedButton());
+        test('should fill "Welcome to Google Adwords" form', () => client.fillWelcomeForm('prestotests@gmail.com'));
+        test('should fill "SignIn" form', () => client.fillSignInForm('presto_tests'));
     }, "gadwords-client");
     scenario('Logout from the Back Office', client => {
         test('should logout successfully from the Back Office', () => client.signOutBO());

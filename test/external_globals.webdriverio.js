@@ -219,6 +219,13 @@ module.exports = {
                 delete_base_domain_icon: '//*[@id="apps_edit_domain_cont"]/div/div[1]/div[1]/div/a/div',
                 domain_input: '//*[@id="apps_edit_domain_cont"]/div/div[1]/div[2]/input',
                 save_button: '//*[@id="app_save_btn"]'
+            },
+            GoogleAdwords: {
+                google_adwords_voucher: '//*[@id="right-content"]',
+                get_started_button: '//a[@class="maia-button"]',
+                email_input: '//*[@id="gwt-debug-about-page-email"]/input',
+                website_input: '//*[@id="gwt-debug-about-page-website"]/input',
+                continue_button: '//*[@id="gwt-debug-about-page-continue-button"]/div/div/div/div[2]'
             }
         }
 

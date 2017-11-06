@@ -167,8 +167,7 @@ module.exports = {
             },
             ModuleGoogleAdwords: {
                 voucher_input: '//pre[@id="adwords_voucher"]',
-                gadwords_start_button: '//*[@id="content"]/div[5]/div[2]/div/div/div/p/a',
-                google_adwords_voucher: '//*[@id="right-content"]/div[1]/a'
+                gadwords_start_button: '//*[@id="content"]/div[5]/div[2]/div/div/div/p/a'
             },
             SettingPage: {
                 setting_subtab: '#subtab-ShopParameters',

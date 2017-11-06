@@ -9,7 +9,7 @@ class GoogleAdwords extends CommonClient {
             .waitForExist(selector.BO.ModuleGoogleAdwords.voucher_input, 90000)
             .then(() => this.client.getText(selector.BO.ModuleGoogleAdwords.voucher_input))
             .then((voucher) => {
-                if (voucher == "") {
+                if (voucher === "") {
                     throw new Error("Google AdWords promotional code is empty");
                 }
             });

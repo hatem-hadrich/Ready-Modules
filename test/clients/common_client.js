@@ -34,7 +34,6 @@ class CommonClient {
         return this.client
             .click(selector.BO.ModulesPage.modules_subtub)
             .waitForExist(selector.BO.ModulesPage.modules_search_results, 90000)
-        //.click(selector.BO.ModulesPage.installed_module_tabs)
     }
 
     searchModule(moduleName) {
@@ -184,7 +183,6 @@ class CommonClient {
             .setValue(selector.FO.CheckoutPage.PersonalInformationSection.first_name_input, 'John')
             .setValue(selector.FO.CheckoutPage.PersonalInformationSection.last_name_input, 'Doe')
             .setValue(selector.FO.CheckoutPage.PersonalInformationSection.email_guest_input, 'pub@prestashop.com')
-            //.click(selector.FO.CheckoutPage.PersonalInformationSection.customer_privacy_checkbox)
             .scroll(selector.FO.CheckoutPage.PersonalInformationSection.continue_guest_personal_information_button, 90000)
             .click(selector.FO.CheckoutPage.PersonalInformationSection.continue_guest_personal_information_button)
     }

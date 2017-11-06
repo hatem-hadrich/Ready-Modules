@@ -16,7 +16,7 @@ global.listNameInput = 'Test_list_MailChimp' + date_time;
 module.exports = {
     selector: {
 
-        BO:{
+        BO: {
             Common: {
                 menu: '#nav-sidebar',
                 close_validation_button: '.growl-close',
@@ -28,17 +28,23 @@ module.exports = {
                 password_input: '#passwd',
                 login_button: '[name="submitLogin"]'
             },
+            //Modules page selectors
             ModulesPage: {
-                modules_subtab: '#subtab-AdminParentModulesSf',
-                search_input: 'div.pstaggerAddTagWrapper > input',
-                search_button: '.btn.btn-primary.pull-right.search-button',
+                modules_subtub: '#subtab-AdminParentModulesSf',
+                installed_module_tabs: '(//div[@class="page-head-tabs"]/a)[2]',
+                modules_search_results: '.module-search-result-wording',
+                modules_search_input: '.pstaggerAddTagInput.module-tags-input',
+                modules_search_button: '//*[@id="main-div"]/div[3]/div[2]/div/div[2]/div/div[5]/div/div[1]/div/button',
+                module_number_span: '//*[@id="main-div"]/div[3]/div[2]/div/div[2]/div/div[7]/span[1]',
                 page_loaded: '.module-search-result-wording',
-                installed_modules_tabs: '(//div[@class="page-head-tabs"]/a)[2]',
-                module_number_span: '[class="module-sorting-search-wording"]',
-                number_of_module_found:'//*[@id="main-div"]/div[3]/div/div/div[2]/div/div[7]/span[1]',
-                configuration_button:'//*[@id="modules-list-container-all"]/div/div/div/div[5]/div[2]/form/button',
                 module_menu_button: '[class="btn btn-primary-outline  dropdown-toggle"]',
-                enable_module_button: '[class="dropdown-item module_action_menu_enable"]'
+                configure_module_button: '[data-confirm_modal="module-modal-confirm-%module_tech_name-configure"]',
+                enable_module_button: '[data-confirm_modal="module-modal-confirm-%module_tech_name-enable"]',
+                disable_module_button: '[data-confirm_modal="module-modal-confirm-%module_tech_name-disable"]',
+                disable_module_confirm_button: '[class="btn btn-primary uppercase module_action_modal_disable"]',
+                actions_module_dropdown: '//*[@class="btn btn-primary-outline  dropdown-toggle"]',
+                action_module_installed_button: '//*[@id="modules-list-container-all"]/div[1]/div/div/div[5]/div[2]/form/button',
+                action_module_built_button: '//*[@id="modules-list-container-native"]/div/div/div/div[5]/div[2]/form/button'
             },
             //Customer page selectors
             CustomersPage: {
@@ -158,6 +164,10 @@ module.exports = {
                     customer_secret_input: '//*[@id="vcs"]',
                     save_button: '//*[@id="module_form_submit_btn_33"]'
                 }
+            },
+            ModuleGoogleAdwords: {
+                voucher_input: '//pre[@id="adwords_voucher"]',
+                gadwords_start_button: '//*[@id="content"]/div[5]/div[2]/div/div/div/p/a'
             },
             SettingPage: {
                 setting_subtab: '#subtab-ShopParameters',
@@ -368,7 +378,7 @@ module.exports = {
 
         }
     },
-    shouldExist: function(err, existing) {
+    shouldExist: function (err, existing) {
         should(err).be.not.defined;
         should(existing).be.true;
     }

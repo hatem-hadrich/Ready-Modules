@@ -8,6 +8,9 @@ var options = {
     waitForTimeout: 30000,
     desiredCapabilities: {
         browserName: 'chrome',
+        // chromeOptions: {
+        //     args: ['--load-extension=' + '/projet/PrestaShop/ready/ready_module/test/datas/captcha-solutions']
+        // }
     },
     port: 4444
 };

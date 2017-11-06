@@ -3,11 +3,6 @@ const {getClient} = require('../../common.webdriverio.js');
 const {selector} = require('../../globals.webdriverio.js');
 var toUpload = path.join(__dirname, '../..', 'datas', 'image_test.jpg');
 
-var Tesseract = require('tesseract.js');
-var fs = require('fs');
-var request = require('request');
-
-var captchaSolution = "";
 
 class BlockPro {
     constructor() {
@@ -277,75 +272,6 @@ class BlockPro {
             .then(() => this.client.getText(selector.FO.BlockPro.Comment.succes_comment))
             .then((text) => {expect(text).to.eql("Your comment has been sent successfully. Thanks for comment!")})
             .pause(5000);
-    }
-
-    getCaptcha() {
-
-        return this.client
-            .waitForExist("#secureCodReview", 90000)
-            .moveToObject("#secureCodReview", 90000)
-            .then(() => this.client.getAttribute("#secureCodReview", 'src'))
-            .then((src) => {
-                Tesseract.detect(src, {lang: "eng"})
-                    .progress(function  (p) { console.log('progress', p)    })
-                    .then(function (result) { console.log('result', result.text)    });
-            })
-            // .execute(function() {
-            //
-            //     // var e = document.createElement("script");
-            //     // e.src = "https://cdn.jsdelivr.net/npm/html2canvas@0.5.0-beta4/dist/html2canvas.min.js";
-            //     // document.body.appendChild(e);
-            //     //
-            //     // e = document.createElement("script");
-            //     // e.src = "https://cdn.jsdelivr.net/npm/base64-js@1.2.1/base64js.min.js";
-            //     // document.body.appendChild(e);
-            //     //
-            //     // e = document.createElement("script");
-            //     // e.src = "https://cdn.jsdelivr.net/npm/canvas2image@1.0.5/canvas2image.min.js";
-            //     // document.body.appendChild(e);
-            //
-            //     function takePicture() {
-            //         var img = new Image();
-            //         img.src = document.getElementById("secureCodReview").src;
-            //             Tesseract.recognize(img)
-            //                 .progress(function  (p) { console.log('progress', p)    })
-            //                 .then(function (result) { console.log('result', result.text)    });
-            //         // e.html2canvas($("#secureCodReview"), {
-            //         //     onrendered: function (canvas) {
-            //         //         document.body.appendChild(canvas);
-            //         //         // Convert and download as image
-            //         //         $("#leaveComment").append(Canvas2Image.convertToImage(canvas, 200, 100, 'png'))
-            //         //     }
-            //         // });
-            //     }
-            // })
-            .pause(300000);
-        //this.renderPicture();
-        // var download = function(uri, filename, callback){
-        //     request.head(uri, function(err, res, body){
-        //         console.log('content-type:', res.headers['content-type']);
-        //         console.log('content-length:', res.headers['content-length']);
-        //
-        //         request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-        //     });
-        // };
-        //
-        // download('https://'+URL+'/module/blockblog/captcha', 'test/datas/captcha.png', function(){
-        //     Tesseract.recognize("test/datas/captcha.png")
-        //         .progress(function  (p) { console.log('progress', p)    })
-        //         .then(function (result) {
-        //             console.log('result', result.text);
-        //             captchaSolution = result.text
-        //             //return result.text;
-        //         });
-        // });
-    }
-
-    editCaptcha() {
-        return this.client
-            .waitForExist(selector.FO.BlockPro.Comment.captcha_input, 90000)
-            .setValue(selector.FO.BlockPro.Comment.captcha_input, captchaSolution)
-            .pause(300000);
     }
 
 }

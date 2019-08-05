@@ -52,10 +52,10 @@ function initCommands(client) {
             .url('https://' + URL)
             .waitForExist(this.selector.FO.AccessPage.access_loginFO, 90000)
             .click(this.selector.FO.AccessPage.access_loginFO)
-            .waitForExist(this.selector.FO.AccessPage.loginFO, 90000)
-            .setValue(this.selector.FO.AccessPage.loginFO, 'pub@prestashop.com')
-            .setValue(this.selector.FO.AccessPage.passwordFO, '123456789')
-            .click(this.selector.FO.AccessPage.login_btnFO)
+            .waitForExist(this.selector.FO.AccessPage.loginFO_input, 90000)
+            .setValue(this.selector.FO.AccessPage.loginFO_input, 'pub@prestashop.com')
+            .setValue(this.selector.FO.AccessPage.passwordFO_input, '123456789')
+            .click(this.selector.FO.AccessPage.loginFO_button)
             .waitForExist(this.selector.FO.AccessPage.logo_home_page);
     });
 

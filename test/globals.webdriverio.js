@@ -38,7 +38,9 @@ module.exports = {
                 number_of_module_found:'//*[@id="main-div"]/div[3]/div/div/div[2]/div/div[7]/span[1]',
                 configuration_button:'//*[@id="modules-list-container-all"]/div/div/div/div[5]/div[2]/form/button',
                 module_menu_button: '[class="btn btn-primary-outline  dropdown-toggle"]',
-                enable_module_button: '[class="dropdown-item module_action_menu_enable"]'
+                enable_module_button: '[class="dropdown-item module_action_menu_enable"]',
+                configure_module_button: '[class="dropdown-item module_action_menu_configure"]',
+                actions_module_dropdown:'//*[@id="modules-list-container-native"]/div/div/div/div[5]/div[2]/button'
             },
             //Customer page selectors
             CustomersPage: {
@@ -173,6 +175,22 @@ module.exports = {
                 config_module_button: '//*[@id="modules-list-container-all"]/div/div/div/div[5]/div[2]/form/button',
                 option_select: '//*[@id="current_list_id"]/option[3]',
                 list_input: '//*[@id="new_list_name"]'
+            },
+            ModulePagePaypal: {
+                settings_tab: '//*[@id="content"]/div[6]/ul/li[2]/a',
+                product_tab: '//*[@id="content"]/div[7]/ul/li[1]/a',
+                product_subtab: '//*[@id="content"]/div[6]/ul/li[1]/a',
+                enable_sandbox_toggle: '//*[@id="fieldset_0"]/div[2]/div[1]/div/span/label[1]',
+                save_button: '//*[@id="configuration_form_submit_btn"]',
+                first_box_activate_button: '//*[@id="paypal_conf"]/div[4]/div[1]/div/div/a',
+                email_input: '//*[@id="emailAddress"]',
+                next_button: '//*[@id="createContinue"]',
+                login_input: '//*[@id="email"]',
+                password_input: '//*[@id="password"]',
+                connect_button: '//*[@id="btnLogin"]',
+                agree_button: '//*[@id="agree"]',
+                back_to_shop_button: '//*[@id="goBackLink"]',
+                second_box_activate_button: '//*[@id="paypal_conf"]/div[4]/div[2]/div/div/a',
             },
             ContactPage: {
                 contact_subtab: '//*[@id="subtab-AdminParentStores"]/a',
@@ -363,6 +381,8 @@ module.exports = {
                 checkout_step3_continue_button: '//*[@id="js-delivery"]/button',
                 footer: '//*[@id="footer"]',
                 payment_option_radio: '//*[@id="payment-option-1"]',
+                payment_with_paypal_radio: '//*[@id="payment-option-3"]',
+                payment_with_credit_card_radio: '//*[@id="payment-option-4"]',
                 first_logo: '//a[@class="%SOCIAL custom-social-button-all custom-social-button-2"]'
             }
 
